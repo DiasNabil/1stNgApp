@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Snap } from '../models/face-snap.model';
 import { SnapsService } from '../services/snap.service';
 
+
 @Component({
   selector: 'app-snap-list',
   templateUrl: './snap-list.component.html',
@@ -18,6 +19,7 @@ export class SnapListComponent implements OnInit{
 
     this.arraySnaps = this.snapsService.getAllSnaps()
   }
+
 
 
 }

@@ -1,0 +1,17 @@
+<div class="face-snap-card" [ngClass]="{liked : likeBtn === '💔'}">
+
+  <h2>{{snap.title | titlecase}}</h2>
+
+  <p *ngIf="snap.location">Localisation : {{snap.location}}</p>
+
+  <img [src]="snap.imgUrl" [alt]="snap.title">
+
+  <p class="like">
+    <button (click)="onLike()">{{likeBtn}}</button>
+
+    <span [ngStyle]="{color: 'rgb('+(snap.like/25) +',0,0)'}">{{snap.like | number}}</span>
+  </p>
+  <a routerLink="/snaps">Back to snaps</a>
+  <p class="date">Publiée le {{snap.date | date: 'd MMMM y à hh:mm'}}</p>
+
+</div>
